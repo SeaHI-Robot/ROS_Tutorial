@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Rc</title>
+    <title>ROS Tutorial</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport"
@@ -39,9 +39,9 @@
             // 项目名称
             name: 'ME332 Additionals',
             // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-            repo: 'https://github.com/SeaHI-Robot/ROS_Tutorial',
+            repo: '',
             // 在侧边栏中出现的网站图标, 你可以使用CSS来更改大小, 划到底部有可以改的地方
-            // logo: '/_media/seahipage-logo.svg',
+            logo: '/_media/my_ros_logo.svg',
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: true,
             // 同时设置 loadSidebar 和 autoHeader 后, 可以根据 _sidebar.md 的内容自动为每个页面增加标题, 我不喜欢打开这个选项
@@ -53,7 +53,7 @@
             // 最大支持渲染的标题层级
             maxLevel: 5,
             // 修改当前主题颜色,
-            themeColor: '#627d99',
+            themeColor: '#15253e',
             // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
             subMaxLevel: 4,
             // 小屏设备下合并导航栏到侧边栏
@@ -92,12 +92,21 @@
                 formatUpdated:"{YYYY}-{MM}-{DD} {HH}:{mm}",
             },
             // 前后翻页
-            pagination: {
-                previousText: 'Previous Page',
-                nextText: 'Next Page',
-                crossChapter: true,
-                crossChapterText: true,
-            },
+            // pagination: {
+            //     previousText: 'Previous Page',
+            //     nextText: 'Next Page',
+            //     crossChapter: true,
+            //     crossChapterText: true,
+            // },
+            
+            // gitalk评论
+            gitalk: {
+                clientID: 'Iv1.1a210bb0a389d10b',
+                clientSecret: 'f3a4157d9b426bfdea2002640e748994a1e532f8',
+                repo: 'https://github.com/SeaHI-Robot/ROS_Tutorial',
+                owner: 'SeaHI-Robot',
+                admin: ['SeaHI-Robot']
+  }
         }
 
     // 添加插件
@@ -107,7 +116,7 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
     <!-- emoji表情支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script> -->
 
     <!-- 图片放大缩小支持 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
@@ -116,7 +125,7 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
     <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script> -->
 
     <!-- 字数统计 -->
     <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
@@ -131,10 +140,14 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
     
     <!-- 前后页 -->
-    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
    
     <!-- 接入gittalk, 实现评论区功能, 使用仓库里的issue -->
     <!-- https://www.npmjs.com/package/docsify-gitalk   https://www.bilibili.com/video/BV1vM4y1D7aL/?spm_id_from=333.788&vd_source=489a733550a7c846fcce2e3eb3a683cc-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script src="https://unpkg.com/docsify-gitalk@1.0.0/dist/docsify-gitalk.min.js"></script>
     
     <!-- 内嵌显示pdf -->
     <!-- https://github.com/lazypanda10117/docsify-pdf-embed    https://www.bilibili.com/video/BV1GT411s7bQ/?spm_id_from=333.788&vd_source=489a733550a7c846fcce2e3eb3a683cc -->
@@ -144,16 +157,16 @@
 
 
 <!-- 以下这两个block用来改logo图标大小 -->
-<!-- <style>
+<style>
     .app-name {
-        width: 50px;
+        width: 200px;
         height: auto;
     }
 </style>
 
-<nav class="app-nav">
+<!-- <nav class="app-nav">
     <img src="_media/seahipage-logo.svg" class="app-name">
-</nav> -->
+</nav>  -->
 
 </html>
 
