@@ -9,7 +9,7 @@ gitee: https://gitee.com/seahipage/ros_tutorial
 
 
 
-# Home
+## Description
 
 >  此文档作为 **南方科技大学2023Fall ME332 机器人操作系统/ROS 的课程补充材料**，目的是辅助同学们加深对ROS的理解，以便与在今后的项目中灵活运动，同时帮助对熟悉ROS1的同学，快速上手ROS2，内容会比较精简。
 >
@@ -23,7 +23,7 @@ gitee: https://gitee.com/seahipage/ros_tutorial
 
 
 
-- 如果觉得这个文档对你有帮助，[请点击这里](https://github.com/SeaHI-Robot/ROS_Tutorial)，跳转到本文档的github仓库，给这个仓库一个Star；
+- 如果觉得这个文档对你有帮助，请给这个仓库一个Star；
 
 
 
@@ -31,7 +31,7 @@ gitee: https://gitee.com/seahipage/ros_tutorial
 
 
 
-<img src="docsify_files/_media/brave_kun.png" style="zoom: 40%;" />
+<img src="docsify_files/_media/brave_kun.png" style="zoom: 30%;" />
 
 
 
@@ -39,4 +39,4 @@ gitee: https://gitee.com/seahipage/ros_tutorial
 
 " Buy me a cup of coffee ! "
 
-<img src="docsify_files/_media/beg.jpg" style="zoom: 20%;" />
+<img src="docsify_files/_media/beg.jpg" style="zoom: 15%;" />

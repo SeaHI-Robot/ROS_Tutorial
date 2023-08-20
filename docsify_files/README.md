@@ -20,7 +20,7 @@
 
 
 
-<img src="_media/brave_kun.png" style="zoom: 40%;" />
+<img src="_media/brave_kun.png" style="zoom: 30%;" />
 
 
 
@@ -28,4 +28,4 @@
 
 " Buy me a cup of coffee ! "
 
-<img src="_media/beg.jpg" style="zoom: 20%;" />
+<img src="_media/beg.jpg" style="zoom: 10%;" />
