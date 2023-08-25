@@ -12,12 +12,7 @@
 
 
 
-<<<<<<< HEAD
 - 如果觉得这个文档对你有帮助，请点击封面页的`Github Repo`按钮，跳转到本文档的仓库给这个仓库一个Star；
-=======
-- 如果觉得这个文档对你有帮助，[请点击这里](https://github.com/SeaHI-Robot/ROS_Tutorial)，跳转到本文档的github仓库，给这个仓库一个Star；
->>>>>>> 5572552584d4d2fa4711fc707dcc2807cf0c8b47
-
 
 
 - 如果有意愿参与这个文档的建设，请联系作者邮箱`seahirobot@gmail.com`，或者对这个仓库pull request， 成为这个项目的contributor；
