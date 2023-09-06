@@ -118,11 +118,11 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 > roscore是ROS1特有的，他连接所有的ROS节点，是ROS1中的“中央处理器”。ROS2采用了分布分布式架构，消灭了roscore的中心化，因此更稳定；试想你在使用ROS1，然后除了问题，roscore宕机了，那么整个系统也就G了。
 
-2. 新建一个终端，输入`rosrun turtlesim turtlesim_node `，回车运行；这个操作打开了一个节点（node)，对应一个”TurtlSim海龟仿真器“ 。
+2. 新建一个终端，输入`rosrun turtlesim turtlesim_node `，回车运行；这个操作打开了一个节点（node)，对应一个 ” TurtlSim海龟仿真器 “ 。
 
 > rosrun 指令用于启动一个ros节点；turtlesim表示这个节点所在的ROS Package，turtlesim_node则指向了你要启动的节点，节点的内容是由python写好的脚本或者编译好的C++执行文件。
 
-3. 新建一个终端，输入`rosrun turtlesim turtle_teleop_key `，回车运行；然后你就可以通过方向建控制小海龟的移动了。
+3. 新建一个终端，输入 `rosrun turtlesim turtle_teleop_key `，回车运行；然后你就可以通过方向建控制小海龟的移动了。
 
 ![image-20230817184831272](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817184831272.png)
 
@@ -132,3 +132,8 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 ### 小结
 
+> ROS 虽然叫机器人操作系统，但在绝大多数的情况下我愿意叫ROS “机器人通讯系统”，提供了一套便捷好用的通讯框架。比如上面的小海龟，我们启动了 `turtlesim_node` 和 `turtle_teleop_key` 两个节点，轻松实现了 `获取键盘事件`-- 运动状态数据 --> `控制小海龟运动`  的通讯流程 。
+>
+> 
+>
+> 下一节介绍 ROS 中的 **Node**(节点) 以及 节点之间之间的通讯方式；

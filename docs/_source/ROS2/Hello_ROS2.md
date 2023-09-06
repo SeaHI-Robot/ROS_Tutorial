@@ -50,17 +50,7 @@ $ cd ~/colcon_ws/
 $ colcon build
 ```
 
-以上我们初始化了一个采用colcon编译系统的ROS2的workspace。
-
-
-
-接下来需要用到这个工作空间时，进行`$ source ~colcon_ws/devel/setup.bash`，便把该工作空间添加到了ROS包的路径中，可通过下面的指令检测时候添加成功:
-
-```
-$ echo $ROS_PACKAGE_PATH
-```
-
-
+以上我们初始化了一个采用colcon编译系统的ROS2的workspace
 
 
 
