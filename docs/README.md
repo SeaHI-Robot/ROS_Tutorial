@@ -15,11 +15,12 @@
 >  文档内容基于运行在ubuntu 20.04的ros noetic和ros2 foxy（ROS官方对ubuntu 20.04提供ros noetic和ros2 foxy的支持，20.04是唯一一个官方同时提供支持ros1/ros2的ubuntu版本，推荐使用）
 
 
+- 不要在此页面下评论，此页面下加载了 `Tutorial - ROS1` 的第一篇文章 `Hello ROS!` 的评论区;
 
-- 如果觉得这个文档对你有帮助，请点击封面页的`Github Repo`按钮，跳转到本文档的仓库给这个仓库一个Star；
+- 如果觉得这个文档对你有帮助，请点击封面页的 `Github Repo` 按钮，跳转到本文档的仓库给这个仓库一个Star;
 
 
-- 如果有意愿参与这个文档的建设，请联系作者邮箱`seahirobot@gmail.com`，或者对这个仓库pull request或提issue， 成为这个项目的contributor；
+- 如果有意愿参与这个文档的建设，请联系作者邮箱 `seahirobot@gmail.com`，或者对这个仓库pull request或提issue， 成为这个项目的contributor;
 
 
 
