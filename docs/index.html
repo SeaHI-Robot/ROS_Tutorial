@@ -87,6 +87,12 @@
                 text: "<div align='right' width='100%' style='color:gray; font-s1ze:16px; margin--top:l0px;'> Last Update:  {docsify-updated}</div>",
                 formatUpdated:"{YYYY}-{MM}-{DD} {HH}:{mm}",
             },
+            // 进度条 只有vue主题才有显示
+            progress:{
+                position: "top",
+                color: "var(--theme-color, #42b983)",
+                height: "3px",
+            },
             // 前后翻页
             // pagination: {
             //     previousText: 'Previous Page',
@@ -94,6 +100,16 @@
             //     crossChapter: true,
             //     crossChapterText: true,
             // },
+            // 回到顶部   <!-- 🔝 -->
+            docsifyBackTop : {
+                size: 32,
+                bottom: 15,
+                right: 15,
+                logo: 's',
+                bgColor: '#ffffff'
+            },
+ 
+
             
             // gitalk评论
             // gitalk: {
@@ -119,14 +135,12 @@
                 loading: "lazy",
                 crossorigin:"anonymous"
             }
-
-
-  
-            
-     
+    
 
         }
+    
 
+    
     // 添加插件
     </script>
 
@@ -155,10 +169,16 @@
     <!-- <script src="https://unpkg.com/docsify-busuanzi@1.0.1/dist/docsify-busuanzi.min.js"></script> -->
     
     <!-- 显示文章最后更新时间 -->   <!-- https://www.npmjs.com/package/docsify-updated -->
-    <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
     
     <!-- 前后页 -->
-    <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <!-- 阅读进度条 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+
+    <!-- 回到顶部 -->
+    <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
    
     <!-- 接入gittalk, 实现评论区功能, 使用仓库里的issue -->
     <!-- https://www.npmjs.com/package/docsify-gitalk   https://www.bilibili.com/video/BV1vM4y1D7aL/?spm_id_from=333.788&vd_source=489a733550a7c846fcce2e3eb3a683cc-->
@@ -175,7 +195,8 @@
         https://www.npmjs.com/package/docsify-giscus -->
     <link rel="stylesheet" href="https://unpkg.com/docsify-giscus@1.0.2/dist/giscus.css">
     <script src="https://unpkg.com/docsify-giscus@1.0.2/dist/docsify-giscus.min.js"></script>
- 
+    
+   
 </body>
 
 
@@ -183,7 +204,7 @@
 <!-- 以下这两个block用来改logo图标大小 -->
 <style>
     .app-name {
-        width: 200px;
+        width: 180px;
         height: auto;
     }
 </style>
