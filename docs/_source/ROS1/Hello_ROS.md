@@ -118,7 +118,7 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 > roscore是ROS1特有的，他连接所有的ROS节点，是ROS1中的“中央处理器”。ROS2采用了分布分布式架构，消灭了roscore的中心化，因此更稳定；试想你在使用ROS1，然后除了问题，roscore宕机了，那么整个系统也就G了。
 
-2. 新建一个终端，输入`rosrun turtlesim turtlesim_node `，回车运行；这个操作打开了一个节点（node)，对应一个 ” TurtlSim海龟仿真器 “ 。
+2. 新建一个终端，输入`rosrun turtlesim turtlesim_node `，回车运行；这个操作打开了一个节点（node)，对应一个 "TurtleSim"海龟仿真器 。
 
 > rosrun 指令用于启动一个ros节点；turtlesim表示这个节点所在的ROS Package，turtlesim_node则指向了你要启动的节点，节点的内容是由python写好的脚本或者编译好的C++执行文件。
 
@@ -137,3 +137,17 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 > 
 >
 > 下一节介绍 ROS 中的 **Node**(节点) 以及 节点之间之间的通讯方式；
+
+
+
+<br>
+<br>
+<br>
+
+<center>
+Last edited on September 10, 2023.
+</center>
+
+<br>
+<br>
+

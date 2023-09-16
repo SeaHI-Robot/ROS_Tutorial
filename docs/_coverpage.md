@@ -6,7 +6,7 @@
 
 
 
-# ME333 Additional Materials
+# ME332 Additional Materials
 
 
 ![](_media/banner.png) 
@@ -14,7 +14,8 @@
 
 
 
-> Tutorials for ROS1 & ROS2
+> *Project "MEAM332"*
+
 
 
 
