@@ -46,6 +46,41 @@ $ colcon build
 
 以上我们初始化了一个采用colcon编译系统的ROS2的workspace
 
+![Alt text](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/colcon_ws.png)
+
+可以看到，`colcon`的目录和`catkin`还是有区别的；`src`文件夹还是老样子,作为开发package时候用到的目录；`build`文件夹和ROS1基本一样构建ROS软件包的中间文件和构建脚本；`install`是ros1没有的，ros2目录的setup。bash存放在这里，而ros1的目录存放在`devel`目录里；
+
+
+## Hello ROS2！
+
+> 按照惯例，入门ROS必先跑小海龟
+
+
+安装turtlesim包
+```
+$ sudo apt install ros-foxy-turtlesim
+```
+
+从ros1到ros2，基本的一些指令有变化，如：
+
+`roscore`  --> `被砍掉了`
+
+`rosrun` --> `ros2 run`
+
+`roslaunch` --> `ros2 launch`    
+
+
+`rostopic` --> `ros2 topic`
+
+`rosservice` --> `ros2 service`
+
+`rosparam` --> `ros2 param`
+
+
+直接`ros2 run`启动turtlesim包中的节点就可以愉快玩耍了；
+
+
+![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/ros2turtle.png)
 
 
 <br>
@@ -53,7 +88,7 @@ $ colcon build
 <br>
 
 <center>
-Last edited on September 10, 2023.
+Last edited on September 17, 2023.
 </center>
 
 <br>
