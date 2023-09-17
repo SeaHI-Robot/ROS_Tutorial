@@ -34,12 +34,6 @@
 
 
 
-hh
-
-
-
-xsanxjaksbxahjbchdbkhcdnsjkcdnsjkncdsjkcndsjk
-
 ## 创建你的colcon工作空间
 
 colcon是ros2的开发编译系统，功能更加庞大。
