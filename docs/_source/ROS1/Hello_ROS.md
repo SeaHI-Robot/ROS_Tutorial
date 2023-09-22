@@ -126,13 +126,33 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 
 
+### ros指令
+> 熟练使用后ros指令可以大大提高开发效率
+
+常用的指令(这里仅仅列举一些，便于review)
+- `rosrun`
+- `roslaunch`
+- `rostopic`
+- `rosservice`
+- `rosparam`
+- `rosnode`
+- `rosbag`
+- `rossrv`
+- `rosmsg`
+- `roscd`
+- `rospack`
+- `rosdep`
+- `roslog`
+
+
+
 ### 小结
 
-> ROS 虽然叫机器人操作系统，但在绝大多数的情况下我愿意叫ROS “机器人通讯系统”，提供了一套便捷好用的通讯框架。比如上面的小海龟，我们启动了 `turtlesim_node` 和 `turtle_teleop_key` 两个节点，轻松实现了 `获取键盘事件`--> 运动状态数据 --> `控制小海龟运动`  的通讯流程 。
+> ROS 虽然叫机器人操作系统，但在绝大多数的情况下ROS更像是 “机器人通讯系统”，提供了一套便捷好用且有统一规范的通讯框架。比如上面的小海龟，我们启动了 `turtlesim_node` 和 `turtle_teleop_key` 两个节点，实现了 *`获取键盘事件`*----*运动指令数据*----> *`控制小海龟运动`*  的通讯流程 。
 >
 > 
 >
-> 下一节介绍 ROS 中的 **Node**(节点) 以及 节点之间之间的通讯方式；
+> 下一节将会review ROS 中的 **Node**(节点) 以及 节点之间之间的通讯方式；
 
 
 
