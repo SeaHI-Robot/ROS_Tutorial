@@ -5,10 +5,12 @@
 > 阅读本节前请follow完课程课件或`wiki`的相关部分
 
 ```pdf
-
 https://gitee.com/seahipage/ros_tutorial/raw/master/docs/_media/Chapter%202%20WS-Package-Communication.pdf
 ```
 
+```pdf
+_media/Chapter2-WS-Package-Communication.pdf
+```
 
 - 不同的节点运行不同的程序，同时节点间需要通讯，交流数据来让整个系统有机运行；
 
