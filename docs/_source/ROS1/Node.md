@@ -5,7 +5,7 @@
 > 阅读本节前请follow完课程课件或`wiki`的相关部分
 
 ```pdf
-../../_media/Chapter%202%20WS-Package-Communication.pdf
+https://gitee.com/seahipage/ros_tutorial/blob/master/docs/_media/Chapter%202%20WS-Package-Communication.pdf
 ```
 
 
