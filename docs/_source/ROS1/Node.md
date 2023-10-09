@@ -61,7 +61,7 @@ $ rqt_graph
 
 
 
->  `/turtle1`是话题，`/cmd_vel`是运动信息；通过Topic发布的信息是在Topic下面挂着的；
+>  `/turtle1/cmd_vel`话题的名称，这个话题包含运动信息；话题的名字可以是随便取的；一般速度话题我们约定俗成地都写成`/cmd_vel`，即command_velocity.
 
 
 
