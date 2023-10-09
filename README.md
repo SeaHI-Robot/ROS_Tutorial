@@ -52,4 +52,4 @@ gitee: https://gitee.com/seahipage/ros_tutorial
 > 
 > *MEAM332*这个项目纯纯为爱发癫，好好好好好好好好好好好好好好好好好好好好
 
-<img src="_media/beg.jpg" style="zoom: 10%;" />
+<img src="docs/_media/beg.jpg" style="zoom: 10%;" />
