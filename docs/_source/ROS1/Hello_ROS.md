@@ -127,7 +127,7 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 
 ### ros指令
-> 熟练使用后ros指令可以大大提高开发效率，建议熟练掌握
+> 熟练使用后ros指令可以大大提高开发效率，建议 **熟练掌握 ！！！**
 
 常用的指令        --      *这里仅仅列举一些，便于review*
 - `rosrun`
@@ -143,6 +143,10 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 - `rospack`
 - `rosdep`
 - `roslog`
+
+
+
+其中，
 
 
 

@@ -68,7 +68,7 @@ $ rqt_graph
 
 <br>
 
-### **Topic机制的Components**
+### Topic机制的Components
 <br>
 
 1. **发布者（Publisher）**
@@ -95,7 +95,7 @@ $ rqt_graph
 
 <br>
 
-### **Topic机制的workflow**
+### Topic机制的workflow
 
 > 当一个节点发布消息时，它会将消息发送给`ROS Master`，并指定消息所属的`Topic`。同时，ROS Master会将这个消息的信息（包括消息类型）广播给所有的订阅者。订阅者收到广播后，可以根据消息类型进行处理。
 >
@@ -110,7 +110,7 @@ $ rqt_graph
 <br>
 
 
-### **Pros & Cons**
+### Pros & Cons
 
 以下是我让ChatGPT写的一些关于`Topic`通讯机制的优缺点，我觉得它说得**对对对对对对**：
 
@@ -149,7 +149,7 @@ $ rqt_graph
 ## 2.2 - Service / 服务
 <br>
 
-### **From "Topic" to "Service"**
+### From "Topic" to "Service"
 <br>
 
 使用`Topic`机制，相当于要不停的发发发和收收收，适合需要进行密集信息交流的场景；如自动驾驶的时候获取传感器的信息，毕竟传感器信息流要是断了可能小命不保；
@@ -199,7 +199,7 @@ $$
 <br>
 
 
-### **Service机制的Components**
+### Service机制的Components
 
 <br>
 
@@ -225,7 +225,7 @@ $$
 <br>
 
 
-### **Pros & Cons**
+### Pros & Cons
 
 以下是我让ChatGPT写的一些关于`Service`通讯机制的优缺点，我觉得它说得**好好好好好好**：
 
