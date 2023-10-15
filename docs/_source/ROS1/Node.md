@@ -61,7 +61,7 @@ $ rqt_graph
 
 
 
->  `/turtle1/cmd_vel`话题的名称，这个话题包含运动信息；话题的名字可以是随便取的；一般速度话题我们约定俗成地都写成`/cmd_vel`，即command_velocity.
+>  `/turtle1/cmd_vel`是话题的名称，这个话题包含运动信息；话题的名字可以是随便取的；一般速度话题我们约定俗成地都写成`/cmd_vel`，即command_velocity.
 
 
 
