@@ -7,7 +7,7 @@
 for duckbot robot</p>
   </description>
   <author>Siyuan Wang</author>
-  <maintainer email="seahirobot@mgail.com" />
+  <maintainer email="seahirobot@gmail.com" />
   <license>BSD</license>
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roslaunch</depend>
