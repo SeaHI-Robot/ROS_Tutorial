@@ -20,7 +20,7 @@
 
   <link name="support_1">
     <visual name="">
-      <origin xyz="0.085 0.0 -0.001" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.085 0.0 -0.002" rpy="0.0 0.0 0.0"/>
       <geometry>
         <sphere radius="0.0025"/>
       </geometry>
@@ -29,7 +29,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.085 0.0 -0.001" rpy="0.0 0.0 0.0"/>
+      <origin xyz="0.085 0.0 -0.002" rpy="0.0 0.0 0.0"/>
       <geometry>
         <sphere radius="0.0025"/>
       </geometry>
@@ -44,7 +44,7 @@
 
   <link name="support_2">
     <visual name="">
-      <origin xyz="-0.085 0.0 -0.001" rpy="0.0 0.0 0.0"/>
+      <origin xyz="-0.085 0.0 -0.002" rpy="0.0 0.0 0.0"/>
       <geometry>
         <sphere radius="0.0025"/>
       </geometry>
@@ -53,7 +53,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.085 0.0 -0.001" rpy="0.0 0.0 0.0"/>
+      <origin xyz="-0.085 0.0 -0.002" rpy="0.0 0.0 0.0"/>
       <geometry>
         <sphere radius="0.0025"/>
       </geometry>

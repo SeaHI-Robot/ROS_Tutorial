@@ -12,6 +12,6 @@
   
   <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -model duckbot_gazebo -param robot_description" output="screen"/>
 
-  <!-- <node name="teleop_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py"/> -->
+  <node name="teleop_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py"/>
 
 </launch>

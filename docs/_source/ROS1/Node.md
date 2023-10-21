@@ -46,10 +46,10 @@ $$
 ## 2.1 - Topic / 话题
 <br>
 
-首先请rosrun打开turtlesim_node，再打开turtle_teleop_key（上一节最后讲的操作）:
+首先请`rosrun`打开`turtlesim_node`，再打开`turtle_teleop_key`（上一节最后讲的操作）:
 
 
-现在我们想知道，这两个节点之间怎么进行数据交流的。可以使用ROS中一个好用的可视化工具：rqt_graph！(没装rqt_graph的话安装一下)
+现在我们想知道，这两个节点之间怎么进行数据交流的。可以使用ROS中一个好用的可视化工具：`rqt_graph`！(没装rqt_graph的话安装一下)
 
 ```
 $ rqt_graph
