@@ -1,6 +1,6 @@
 # Duckbot
 
-> 鸭鸭机器人，用于2023Fall-ME332课程ROS中使用URDF的学习
+> 鸭鸭机器人，2023Fall-ME332课程中用于在ROS中学习使用URDF
 
 
 
