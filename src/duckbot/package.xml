@@ -15,6 +15,7 @@ for duckbot robot</p>
   <depend>rviz</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>teleop_twist_keyboard</depend>
+  <depend>rqt_robot_steering</depend>
   <depend>gazebo</depend>
   <export>
     <architecture_independent />

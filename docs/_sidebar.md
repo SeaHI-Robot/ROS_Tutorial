@@ -5,6 +5,7 @@
   * [1. Hello ROS!](_source/ROS1/Hello_ROS.md)
   * [2. ROS Node](_source/ROS1/Node.md)
   * [3. TF](_source/ROS1/tf.md)
+  * [3. URDF in ROS](_source/ROS1/urdf.md)
 * Tutorials - ROS2
   * [1. Hello ROS2!](_source/ROS2/Hello_ROS2.md)
 * ROS/ROS2 Projects
