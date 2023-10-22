@@ -8,6 +8,6 @@
   * [3. URDF in ROS](_source/ROS1/urdf.md)
 * Tutorials - ROS2
   * [1. Hello ROS2!](_source/ROS2/Hello_ROS2.md)
-* ROS/ROS2 Projects
-  * [项目分享](_source/ROS_Proj/ROS_Proj.md)
+* Project Sharing
+  * [ROS Package Sharing](_source/ROS_Proj/ROS_Proj.md)
 
