@@ -20,8 +20,8 @@
   ```
 
   这个语句启动了 `teleop_twist_keyboard`  包中的 `teleop_twist_keyboard.py` 脚本，本质上就是一个通过获取键盘输入来给 `cmd_vel` 话题发送 `Twist` 运动消息的脚本，自己写一个这个脚本也是可以的；
-
-
+  
+  同时，也可以直进行 `roslaunch duckbot gazebo.launch` 的操作，再单独用 `rosrun` 启动 `teleop_twist_keyboard.py` 这个脚本。
 
 - 关于 Gazebo 中使用urdf的配置，可以参考：
 
