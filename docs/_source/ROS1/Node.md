@@ -2,7 +2,9 @@
 
 > 上一节我们从`turtlesim`仿真器开始，进一步的，探究ROS最基本的component，“Node/节点”；
 >
-> 阅读本节前请follow完课程课件或`wiki`的相关部分
+> 阅读本节前请follow完课程课件或`wiki`的相关部分，**本章节极其不适合初次学习**，**但极其适合Review！**
+
+
 
 
 ```pdf
@@ -41,9 +43,12 @@ $$
 
 ---
 
-
+<br>
 
 ## 2.1 - Topic / 话题
+
+> *[ros_wiki_tutorial](http://wiki.ros.org/ROS/Tutorials)*
+
 <br>
 
 首先请`rosrun`打开`turtlesim_node`，再打开`turtle_teleop_key`（上一节最后讲的操作）:
@@ -143,10 +148,12 @@ $ rqt_graph
 
 ---
 
-
 <br>
 
 ## 2.2 - Service / 服务
+
+> *[ros_wiki_tutorial](http://wiki.ros.org/ROS/Tutorials)*
+
 <br>
 
 ### From "Topic" to "Service"
@@ -265,8 +272,54 @@ $$
 
 
 
+## 2.3 - Action 
 
-## 2.3 - Action / 
+> *[ros_wiki_tutorial](http://wiki.ros.org/actionlib_tutorials)*
+
+<br>
+
+### "Why action?" 
+<br>
+
+使用`Topic`和`Service`，足以应对绝大多数情况，且他们足够简单易用；
+
+
+
+试想有这样的情况 : 有人想向某个节点发送请求，以执行某些任务，并接收对请求的应答。这完全可以通过 `Service` 来实现， 但是在某些情况下，如果服务需要很长时间执行，用户可能希望在执行过程中取消请求，或者得到关于请求进展情况的定期反馈，这个情况就有请`action`机制出马了； 比如，在MoveIt中就使用了`action`机制；
+
+
+
+
+
+所以：
+$$
+\textbf{“ Action 是一种更加高级的 Service 机制，两者都是基于Client-Server的架构 ”}
+$$
+
+
+
+
+一般的教程甚至官方的wiki都不会把`action`同`topic`、`service`放在一起讲，但`action`作为一种高级通讯机制，笔者觉得有必要把他们放在一起比较。
+
+![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20231028213624034.png)
+
+### Service机制的Components
+
+<br>
+
+1. **服务器端（Server）**：
+
+   
+
+
+2. **客户端（Client）**
+
+   
+
+
+3. **action文件**
+   1. 定义action的请求、反馈和结果类型。包括三个字段：goal、result和feedback。
+   2. 编写action文件的时候必须严格用`---`分隔，且按照`goal`，`result`，`feedback`的顺序！
 
 
 
@@ -274,23 +327,32 @@ $$
 
 
 
+## 2.4 小结
+
+> - 没啥小结的，如果别人问起你ROS的通讯机制你想起来`Topic`、`Service`和`Action`就行了，以便于在以后自己的项目中灵活运用；
+> - ROS的参数服务器（param server）其实也可以当做ROS通讯机制的一种，不过无不想多讲；参数服务器可以被理解为一个储存ROS全局参数的Node，其他Node需要提取参数的时候直接在参数服务器中拿就行了，所以其实ROS的参数服务器并没有闲的很“通讯”。
 
 
 
+
+
+<!-- 末尾 -->
 
 <br>
 <br>
 <br>
+
+
 
 <center>
-未完待续......
-</center>
+    Last edited on November 28, 2023.
+    </center>
 
-<center>
 
-Last edited on September 24, 2023.
-</center>
 
-<br>
+
+
+
+
 <br>
 <br>
