@@ -18,6 +18,24 @@
 
 
 
+<br>
+
+
+
+## ***"23Fall-ME332-catkin-ws"***
+
+- ***"参考工作空间"*** 
+  - *供参考学习使用，同步课程进度更新*
+  - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
+  - *开发版本：ROS1 noetic*
+  - [*仓库地址*](https://gitee.com/seahipage/23-fall-me332-catkin-ws)
+
+
+
+<br>
+
+
+
 <!-- 末尾 -->
 <br>
 <br>
