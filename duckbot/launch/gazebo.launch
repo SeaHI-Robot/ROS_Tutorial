@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro  $(find duckbot)/urdf/duckbot_gazebo.xacro" /> 
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+      <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+  
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -model duckbot_gazebo -param robot_description" output="screen"/>
+
+  <!-- <node name="teleop_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py"/> -->
+
+</launch>

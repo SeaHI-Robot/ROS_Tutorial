@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro $(find urdfmodel)/urdf/xacro/my_car.urdf.xacro" />
+
+    <node pkg="rviz" type="rviz" name="rviz" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+    
+    <node name="driver" pkg="arbotix_python" type="arbotix_driver" output="screen">
+        <rosparam file="$(find urdfmodel)/config/control.yaml" command="load" />
+        <param name="sim" value="true" />
+    </node>
+    
+</launch>

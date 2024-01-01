@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+    <!-- launch Gazebo with urdf model -->
+    <include file="$(dirname)/spawn_gazebo_world.launch" />
+
+
+    <!-- joint position controller-->
+    <include file="$(dirname)/spawn_joint_position_controllers.launch" />
+
+</launch>

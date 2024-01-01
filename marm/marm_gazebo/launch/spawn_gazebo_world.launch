@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="arg_x" default="0.00" />
+	<arg name="arg_y" default="0.00" />
+	<arg name="arg_z" default="0.02" />
+	<arg name="arg_R" default="0.00" />
+	<arg name="arg_P" default="0.00" />
+	<arg name="arg_Y" default="0.00" />
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find marm_description)/urdf/arm.xacro'" /> 
+
+
+  <!-- spawn a empty gazebo world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" 
+                      args="
+                      -x $(arg arg_x) -y $(arg arg_y) -z $(arg arg_z)
+                      -param robot_description 
+                      -urdf -model robot_arm_urdf" />
+
+
+  <!-- 运行 joint_state_publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <!-- <rosparam param="/source_list">[/arm/joint_states]</rosparam> -->
+  </node>
+
+  <!-- 运行robot_state_publisher节点，发布tf  -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+      respawn="true" output="screen">
+      <remap from="/joint_states" to="/arm/joint_states" />
+  </node>
+
+</launch>

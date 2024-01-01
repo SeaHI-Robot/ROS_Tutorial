@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- launch Gazebo with urdf model -->
+    <include file="$(dirname)/spawn_gazebo_world.launch" />
+
+    <!--joint state controller -->
+    <include file="$(dirname)/spawn_joint_state_controller.launch" />   
+
+    <!-- joint trajectory controller-->
+    <include file="$(dirname)/spawn_joint_trajectory_controllers.launch" />
+
+    <!-- launch moveit! components -->
+    <include file="$(find marm_moveit_config)/launch/move_group.launch"/>
+    
+    <arg name="use_rviz" default="true"/>
+    
+    <include file="$(find marm_moveit_config)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+        <arg name="rviz_config" value="$(find marm_moveit_config)/launch/moveit.rviz"/>
+    </include> 
+        
+
+</launch>

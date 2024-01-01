@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<robot name="duckbot_gazebo" xmlns:xacro="http://wiki.ros.org/xacro">
+  
+  <xacro:include filename="$(find duckbot)/urdf/duckbot.gazebo"/>
+
+  <xacro:include filename="$(find duckbot)/urdf/duckbot.xacro"/>
+  
+</robot>

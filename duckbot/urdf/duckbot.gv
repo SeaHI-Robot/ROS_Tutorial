@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"footprint" [label="footprint"];
+"base_link" [label="base_link"];
+"duck" [label="duck"];
+"left_wheel_link" [label="left_wheel_link"];
+"right_wheel_link" [label="right_wheel_link"];
+"support_1" [label="support_1"];
+"support_2" [label="support_2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"footprint" -> "footprint_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"footprint_joint" -> "base_link"
+"base_link" -> "duck_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"duck_joint" -> "duck"
+"base_link" -> "left_joint" [label="xyz: 0 0.075833 0.005 \nrpy: 0 -0 0"]
+"left_joint" -> "left_wheel_link"
+"base_link" -> "right_joint" [label="xyz: 0 -0.075833 0.005 \nrpy: 0 -0 0"]
+"right_joint" -> "right_wheel_link"
+"footprint" -> "support_joint_1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"support_joint_1" -> "support_1"
+"footprint" -> "support_joint_2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"support_joint_2" -> "support_2"
+}

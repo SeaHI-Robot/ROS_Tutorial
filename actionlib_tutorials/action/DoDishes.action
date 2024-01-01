@@ -1,0 +1,8 @@
+#goal definition
+uint32 dishwasher_id
+---
+#result definition
+uint32 total_dishes_cleaned
+---
+#feedback
+float32 percent_complete

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="iat_publisher" pkg="robot_voice" type="iat_publisher" respawn="false" output="screen"/>
+
+    <node name="tts_subscriber" pkg="robot_voice" type="tts_subscriber" respawn="false" output="screen"/>
+
+</launch>
