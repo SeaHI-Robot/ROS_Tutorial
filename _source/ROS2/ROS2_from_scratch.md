@@ -2,11 +2,10 @@
 
 > ROS2 比 ROS1 多了很多东西......
 >
-> 在对ROS1有比较熟悉的了解后，学习ROS2可以无缝衔接
+> 在对ROS1开发比较熟悉后，学习ROS2基本可以无缝衔接
 >
 > 
->
-> ROS2推荐**有一定coding能力**的同学学习，**如果不能handle heavy coding，建议remake**。
+> ROS2推荐**有一定coding能力**的同学学习，需要熟练掌握C++和python。
 
 
 
@@ -26,7 +25,7 @@
 
 [ROS2 - foxy 官方Doc](https://docs.ros.org/en/foxy/index.html)
 
-[ROS2 基础入门教学视频， 讲得非常清楚，强推！！！](https://www.bilibili.com/video/BV19U4y1n7CQ?p=1)
+[ROS2 基础入门教学视频， 讲得非常清楚](https://www.bilibili.com/video/BV19U4y1n7CQ?p=1)
 
 
 
