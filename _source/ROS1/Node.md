@@ -60,7 +60,7 @@ $$
 $ rqt_graph
 ```
 
-![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image.png)
+![](../../_media/image.png)
 
 圆圈画的为节点，请细品这张图......
 
@@ -301,7 +301,7 @@ $$
 
 一般的教程甚至官方的wiki都不会把`action`同`topic`、`service`放在一起讲，但`action`作为一种高级通讯机制，笔者觉得有必要把他们放在一起比较。
 
-![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20231028213624034.png)
+![](../../_media/image-20231028213624034.png)
 
 ### Service机制的Components
 
@@ -330,7 +330,7 @@ $$
 ## 2.4 小结
 
 > - 没啥小结的，如果别人问起你ROS的通讯机制你想起来`Topic`、`Service`和`Action`就行了，以便于在以后自己的项目中灵活运用；
-> - ROS的参数服务器（param server）其实也可以当做ROS通讯机制的一种，不过无不想多讲；参数服务器可以被理解为一个储存ROS全局参数的Node，其他Node需要提取参数的时候直接在参数服务器中拿就行了，所以其实ROS的参数服务器并没有闲的很“通讯”。
+> - ROS的参数服务器（param server）其实也可以当做ROS通讯机制的一种(牵强)；参数服务器可以被理解为一个储存ROS全局参数的Node，其他Node需要提取参数的时候直接在参数服务器中拿就行了。
 
 
 
@@ -345,7 +345,7 @@ $$
 
 
 <center>
-    Last edited on November 28, 2023.
+    Created on November 10, 2023.
     </center>
 
 

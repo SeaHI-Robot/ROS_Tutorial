@@ -36,7 +36,7 @@ _media/Chapter-3-TF.pdf
 
 <center>
 
-Last edited on November 9, 2023.
+Created on November 9, 2023.
 
 </center>
 

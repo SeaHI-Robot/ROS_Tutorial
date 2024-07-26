@@ -40,7 +40,7 @@ _media/Chapter-4-URDF.pdf
 
 
 <center>
-Last edited on November 22, 2023.
+Created on November 22, 2023.
 </center>
 
 

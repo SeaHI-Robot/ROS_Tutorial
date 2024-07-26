@@ -12,7 +12,7 @@
 <br>
 
 <center>
-Last edited on September 10, 2023.
+Created on September 10, 2023.
 </center>
 
 <br>
