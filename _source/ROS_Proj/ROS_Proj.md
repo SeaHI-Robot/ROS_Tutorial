@@ -14,7 +14,7 @@
   - *鸭鸭机器人  --  2023Fall-ME332课程中用于在ROS中学习使用URDF*
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
   - *开发版本：ROS1 noetic*
-  - [*项目链接*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/master/src/duckbot)
+  - [*项目链接*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/master/resources/duckbot)
 - **import your custom urdf package to ROS**
   - *This is the file repository for files to use the robot arm urdf simulation*
   - *Author:*  [*ageofrobotics*](https://github.com/ageofrobotics)

@@ -5,8 +5,6 @@
 ## 仓库地址
 github: https://github.com/SeaHI-Robot/ROS_Tutorial
 
-gitee: https://gitee.com/seahipage/ros_tutorial
-
 
 
 #### *-- 简介 --*
