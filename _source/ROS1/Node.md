@@ -60,7 +60,7 @@ $$
 $ rqt_graph
 ```
 
-![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image.png)
+![](../../_media/image.png)
 
 圆圈画的为节点，请细品这张图......
 
@@ -301,7 +301,7 @@ $$
 
 一般的教程甚至官方的wiki都不会把`action`同`topic`、`service`放在一起讲，但`action`作为一种高级通讯机制，笔者觉得有必要把他们放在一起比较。
 
-![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20231028213624034.png)
+![](../../_media/image-20231028213624034.png)
 
 ### Service机制的Components
 

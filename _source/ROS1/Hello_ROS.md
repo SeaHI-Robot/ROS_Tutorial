@@ -56,7 +56,7 @@ $ catkin_make
 
 初次运行catkin_make会在src中创建CMakeLIST.txt文件。
 
-![image-20230817183023138](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817183023138.png)
+![image-20230817183023138](../../_media/image-20230817183023138.png)
 
 现在我们初始化了catkin_ws，但是现在ROS还没有识别到这个工作空间的路径，使用下面的指令查询ROS的路径：
 
@@ -64,7 +64,7 @@ $ catkin_make
 $ echo $ROS_PACKAGE_PATH
 ```
 
-![image-20230817182546186](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817182546186.png)
+![image-20230817182546186](../../_media/image-20230817182546186.png)
 
 没有识别到catkin_ws， 为了添加catkin_ws到ROS的路径，我们需要在终端内执行：
 
@@ -74,7 +74,7 @@ $ source ~/catkin_ws/devel/setup.bash
 
 再次`echo $ROS_PACKAGE_PATH`查询，catkin_ws已经被添加；
 
-![image-20230817182809545](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817182809545.png)
+![image-20230817182809545](../../_media/image-20230817182809545.png)
 
 
 
@@ -88,11 +88,11 @@ $ source ~/catkin_ws/devel/setup.bash
 
 为了不每次都在新终端里`source`，你需要打开根目录下的.bashrc文件
 
-<img src="https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817164032397.png" alt="image-20230817164032397" style="zoom:50%;" /> 
+<img src="../../_media/image-20230817164032397.png" alt="image-20230817164032397" style="zoom:50%;" /> 
 
 在里面添加`source ~/catkin_ws/devel/setup.bash`即可； 在新的终端被建立的时候都会去执行.bashrc中的内容，避免了手动输入。
 
-![](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817183613767.png)
+![](../../_media/image-20230817183613767.png)
 
 
 
@@ -120,9 +120,9 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 3. 新建一个终端，输入 `rosrun turtlesim turtle_teleop_key `，回车运行；然后你就可以通过方向建控制小海龟的移动了。
 
-![image-20230817184831272](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817184831272.png)
+![image-20230817184831272](../../_media/image-20230817184831272.png)
 
-![image-20230817190705075](https://gitee.com/SeaHIPage/My_Pics/raw/master/from_ubuntu/image-20230817190705075.png)
+![image-20230817190705075](../../_media/image-20230817190705075.png)
 
 
 
