@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <node name="talker" pkg="cpp_pkg" exec="talker" output="screen"/>
+
+</launch>
