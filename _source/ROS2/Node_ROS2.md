@@ -1,19 +1,194 @@
 # ROS2 Node 
 
 
-> ROS2 Node的api大改了，而且提倡使用面向对象编程的思想。 
-
+> ROS2 Node的api相比ROS1改动较大，提倡使用面向对象编程的思想提高代码可维护性。 
+>
+>
+> **Package build type in ROS2:**
+> - ament_cmake: 和ros1一样的package的结构
+> - ament_python: ros2中针对纯python构建的package的结构
 
 
 
 
 ## Using rclcpp for CPP programming
 
+创建一个简单的cpp的package：
+```bash
+ros2 pkg create --build-type ament_cmake cpp_pkg --dependencies rclcpp std_msgs
+```
 
+
+写一个简单的publisher：
+```cpp
+#include <chrono>
+#include <functional>
+#include <memory>
+#include <string>
+
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
+
+using namespace std::chrono_literals;
+
+
+class Talker : public rclcpp::Node
+{
+  public:
+    Talker(): Node("talker_cpp_node"), count_(0)
+    {
+      publisher_ = this->create_publisher<std_msgs::msg::String>("talker_topic", 10);
+      timer_ = this->create_wall_timer( 500ms, std::bind(&Talker::timer_callback, this ));
+    }
+
+  private:
+    void timer_callback()
+    {
+      auto message = std_msgs::msg::String();
+      message.data = "Hello, world! " + std::to_string(count_++);
+      RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
+      publisher_->publish(message);
+    }
+    rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    size_t count_;
+};
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<Talker>());
+  rclcpp::shutdown();
+  return 0;
+}
+```
+
+ROS2中，node及是一个共享指针，通过std::make_shared<Type>()模板函数创建。同时，node继承rclcpp::Node这个类。
+
+确实，ros2写一个简单的publisher比ros1采用nodehandle的方式复杂得多。。。
+
+Let's say上面这个代码片段的名字是talker.cpp; 进一步的，我们需要对包的CMakeLists.txt进行操作:
+
+修改后的CMakeLists：
+```cmake
+cmake_minimum_required(VERSION 3.8)
+project(cpp_pkg)
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+# find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+
+##### Look Me ! #####
+add_executable(talker src/talker.cpp)
+
+ament_target_dependencies(talker rclcpp std_msgs)
+
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME}
+)
+##### Look Me ! #####
+
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # comment the line when a copyright and license is added to all source files
+  set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # comment the line when this package is in a git repo and when
+  # a copyright and license is added to all source files
+  set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_package()
+```
+
+和ros1或者一般的cmake构建的cpp工程类似，需要先添加可执行文件；随后一般我们要target_link_libraries()，ros2采用了新的语法，ament_target_dependencies(<exec> dependencie1 dependencie2 ...)这样对单独的可执行文件声明依赖的操作，看起来更优雅。
+最后，ros2采用了install机制来安装最后生成的可执行文件，这一点和ros1有区别。而install语法端只需要声明一次，把需要的可执行文件添加进去即可，如下：
+```cmake
+install(TARGETS
+  exec1
+  exec2
+  DESTINATION lib/${PROJECT_NAME}
+)
+```
 
 
 
 ## Using rclpy for Python programming
+
+
+创建一个简单的python的package：
+```bash
+ros2 pkg create --build-type ament_python py_pkg --dependencies rclpy std_msgs
+```
+
+ament_python看起来就是一个纯python包的结构，使用setuptools。一般情况下，只需要在和package的一级同名文件夹下写代码就可以了，cd进入这个文件夹，可以看到有一个__init__.py的空文件，这个文件是告诉python解释器这个文件夹是一个可以import的python的package。
+
+在py_pkg/py_pkg中新建一个文件，let's call it talker.py, 写一个简单的publisher：
+```python
+import rclpy
+from rclpy.node import Node
+import sys
+from std_msgs.msg import String
+
+class Talker(Node):
+    def __init__(self):
+        super().__init__("Talker")
+        self.publisher = self.create_publisher(String, "talker_topic", 10)
+        self.count = 0
+        self.timer_ = self.create_timer(0.5, self.timer_callback)
+    def timer_callback(self):
+        message = String()
+        message.data = "Hello ROS2，" + str(self.count)
+        self.get_logger().info("Publishing:" + message.data)
+        self.publisher.publish(message)
+        self.count += 1
+        
+def main():
+    rclpy.init()
+    node = Talker()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+可以看到，同样的在python中创建ROS2的Node也采用继承的方式，这可能和rcl底层构建有关系，可能在写rcl的时候就这么规划了。
+
+相比于CPP的代码，用python实现一个node明显代码简单了很多。但一样的是，都需要继承rclcpp/rclpy提供的Node类。
+
+
+随后，不同于ros1，我们在ros2中有了独立的python构建类型，需要多一步设置: 
+在setup函数中的entry_points变量中的'console_scripts'的list中添加我们需要的脚本对应的main函数，有点像CMakeLists中add_executable()
+```python
+setup(
+    entry_points={
+        'console_scripts': [
+            "talker_py = py_pkg.talker:main"
+        ],
+    },
+)
+```
+其中，talker_py作为这个脚本的"可执行文件名"。（为什么有双引号，因为python是不需要编译啊~）
+
+
+## Launch Files in ROS2 - For ROS1 User
+
+笔者还是喜欢ros1中的xml格式，拓展性和可读性其实不错，且即改即用，很方便。
+
+ROS2的launch文件确实抽象了点，ROS2的launch文件提倡用python写，launch文件的源代码也是python写的。虽然支持了xml和yaml写launch文件，但这俩都需要编译。一个package中，需要编写launch文件的话还需要在package的中声明launch文件的依赖即ros2launch。
+
+笔者觉得在编写launch体验上ROS2比ROS1在效率和可读性上差的不止一点半点。即便如此，笔者更喜欢沿用xml的格式写ros2的launch文件。
+
 
 <br>
 <br>
