@@ -58,7 +58,7 @@ $ catkin_make // or catkin build
 以上我们初始化了一个采用catkin编译系统的ROS的workspace。
 
 
-需要说明的是，catkin_make之外，更推荐使用catkin tools(catkin build)进行构建工作空间(需要安装：'sudo apt install python3-catkin-tools')，具体可参考EthZ课程和ros wiki。catkin tools相比catkin_make可以选择性指定编译某个工作空间下的package，同时可以多线程编译，方便管理包的同时编译更快，编译时候输出的信息更丰富。同时catkin tools和ROS2的colcon很像，切换到ROS2更下顺手。
+需要说明的是，catkin_make之外，更推荐使用catkin tools(catkin build)进行构建工作空间(需要安装：'sudo apt install python3-catkin-tools')，具体可参考EthZ课程和ros wiki。catkin tools相比catkin_make可以选择性指定编译某个工作空间下的package，同时可以多线程编译，方便管理包的同时编译更快，编译时候输出的信息更丰富。同时catkin tools和ROS2的colcon的cli很像，切换到ROS2更加顺手。
 
 初次运行catkin_make(catkin build)会在src中创建CMakeLIST.txt文件。
 
@@ -94,7 +94,7 @@ $ source ~/catkin_ws/devel/setup.bash
 
 为了不每次都在新终端里`source`，你需要打开根目录下的.bashrc文件
 
-<img src="../../_media/image-20230817164032397.png" alt="image-20230817164032397" style="zoom:50%;" /> 
+![](/_media/image-20230817164032397.png)
 
 在里面添加`source ~/catkin_ws/devel/setup.bash`即可； 在新的终端被建立的时候都会去执行.bashrc中的内容，避免了手动输入。
 
@@ -127,9 +127,9 @@ $ sudo apt-get install ros-<distro>-ros-tutorials
 
 3. 新建一个终端，输入 `rosrun turtlesim turtle_teleop_key `，回车运行；然后你就可以通过方向建控制小海龟的移动了。
 
-![image-20230817184831272](../../_media/image-20230817184831272.png)
+![](../../_media/image-20230817184831272.png)
 
-![image-20230817190705075](../../_media/image-20230817190705075.png)
+![](../../_media/image-20230817190705075.png)
 
 
 
