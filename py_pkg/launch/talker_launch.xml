@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node name="talker_py" pkg="py_pkg" exec="talker_py"/>
+</launch>
