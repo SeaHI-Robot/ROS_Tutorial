@@ -63,9 +63,15 @@ int main(int argc, char * argv[])
 }
 ```
 
-ROS2中，node及是一个共享指针，通过std::make_shared<Type>()模板函数创建。同时，node继承rclcpp::Node这个类。
+[《ROS 2机器人开发从入门到实践》2.5.2用得到的C++新特性](https://www.bilibili.com/video/BV1CRWWeoEso/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=489a733550a7c846fcce2e3eb3a683cc)]
 
-确实，ros2写一个简单的publisher比ros1采用nodehandle的方式复杂得多。。。
+
+
+- ROS2中，node及是一个共享指针，通过std::make_shared<Type>()模板函数创建。同时，node继承rclcpp::Node这个类。
+
+- `#include <functional>`: functional是函数包装器的头文件。常见的函数有三种，直接定义的普通函数，类里面的成员函数，和lamda函数。包装器可以对所有函数类型进行封装，不同于python的函数decorator，c++的包装器像是在给函数起“别名”。上面的程序中的`std::bind()`函数，是安全调用成员函数的方式。
+
+ros2写一个简单的publisher时候，采用OOP继承一个类的方式比ros1采用nodehandle操作node的方式复杂得多。采用面向对象后，cpp的代码比python的也复杂的多，也许这就是cpp的魅力吧。
 
 Let's say上面这个代码片段的名字是talker.cpp; 进一步的，我们需要对包的CMakeLists.txt进行操作:
 
@@ -184,8 +190,42 @@ setup(
 ## Launch Files in ROS2 - For ROS1 User
 
 笔者还是喜欢ros1中的xml格式，拓展性和可读性其实不错，且即改即用，很方便。
+<br>
 
-ROS2的launch文件确实抽象了点，ROS2的launch文件提倡用python写，launch文件的源代码也是python写的。虽然支持了xml和yaml写launch文件，但这俩都需要编译。一个package中，需要编写launch文件的话还需要在package的中声明launch文件的依赖即ros2launch。
+ROS2的launch文件确实抽象了点，ROS2的launch文件提倡用python写，launch文件的源代码也是python写的，因此拓展性也更好，支持了xml和yaml写launch文件。一个package中，需要编写launch文件的话且像ros1一样让package识别launch文件，还需要在 CMakeLists / setup.py 做launch文件的声明，挺麻烦。。。。。。
+- 对于`ament_cmake`，加入:
+```
+# Install launch files.
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+```
+- 对于`ament_python`，加入:
+```
+import os
+from glob import glob
+# Other imports ...
+
+package_name = 'py_launch_example'
+
+setup(
+    # Other parameters ...
+    data_files=[
+        # ... Other data files
+        # Include all launch files.
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[py]or[yaml]or[xml]'))) # ADD THIS LINE ! 用python的launch就用.py的后缀，yaml和xml同理
+    ]
+)
+```
+详细请参考[连接](https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Launch-system.html#integrating-launch-files-into-ros-2-packages)
+
+<br>
+
+按照官方文档，推荐在package.xml中声明依赖ros2launch，不加其实也没关系，加一下可以治强迫症。
+```
+<exec_depend>ros2launch</exec_depend>
+```
 
 笔者觉得在编写launch体验上ROS2比ROS1在效率和可读性上差的不止一点半点。即便如此，笔者更喜欢沿用xml的格式写ros2的launch文件。
 
