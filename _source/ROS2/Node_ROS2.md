@@ -184,7 +184,7 @@ setup(
     },
 )
 ```
-其中，talker_py作为这个脚本的"可执行文件名"。（为什么有双引号，因为python是不需要编译啊~）
+其中，talker_py作为这个脚本的"可执行文件名"。（为什么有双引号，因为python不需要编译啊~）
 
 
 ## Launch Files in ROS2 - For ROS1 User
@@ -194,7 +194,7 @@ setup(
 
 ROS2的launch文件确实抽象了点，ROS2的launch文件提倡用python写，launch文件的源代码也是python写的，因此拓展性也更好，支持了xml和yaml写launch文件。一个package中，需要编写launch文件的话且像ros1一样让package识别launch文件，还需要在 CMakeLists / setup.py 做launch文件的声明，挺麻烦。。。。。。
 - 对于`ament_cmake`，加入:
-```
+```cmake
 # Install launch files.
 install(DIRECTORY
   launch
@@ -202,7 +202,7 @@ install(DIRECTORY
 )
 ```
 - 对于`ament_python`，加入:
-```
+```python
 import os
 from glob import glob
 # Other imports ...
@@ -218,12 +218,12 @@ setup(
     ]
 )
 ```
-详细请参考[连接](https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Launch-system.html#integrating-launch-files-into-ros-2-packages)
+详细的ros2中launch的使用请参考[链接](https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Launch-system.html#integrating-launch-files-into-ros-2-packages)
 
 <br>
 
 按照官方文档，推荐在package.xml中声明依赖ros2launch，不加其实也没关系，加一下可以治强迫症。
-```
+```xml
 <exec_depend>ros2launch</exec_depend>
 ```
 
