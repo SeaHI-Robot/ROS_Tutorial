@@ -1,6 +1,5 @@
 import rclpy
 from rclpy.node import Node
-import sys
 from std_msgs.msg import String
 
 class Talker(Node):

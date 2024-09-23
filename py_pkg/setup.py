@@ -25,7 +25,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "talker_py = py_pkg.talker:main"
+            "talker_py = py_pkg.talker:main",
+            "listener_py = py_pkg.listener:main",
+            "server = py_pkg.service_server:main",
         ],
     },
 )

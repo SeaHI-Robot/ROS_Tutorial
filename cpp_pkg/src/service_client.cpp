@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
   auto request =
       std::make_shared<example_interfaces::srv::AddTwoInts::Request>();
   request->a = atoll(argv[1]);
-  request->b = atoll(argv[3]);
+  request->b = atoll(argv[2]);
 
   while (!client->wait_for_service(1s)) {
     if (!rclcpp::ok()) {
