@@ -28,6 +28,7 @@ setup(
             "talker_py = py_pkg.talker:main",
             "listener_py = py_pkg.listener:main",
             "server = py_pkg.service_server:main",
+            "client = py_pkg.service_client:main",
         ],
     },
 )
