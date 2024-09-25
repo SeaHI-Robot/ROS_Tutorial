@@ -42,10 +42,11 @@ private:
 
 int main(int argc, char *argv[]) {
   rclcpp::init(argc, argv);
-  auto rcl_logger = rclcpp::get_logger("my_logger");
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+              "Publishing MyNumMsg and MySphereMsg, check "
+              "the ros2 topics...\n");
   rclcpp::spin(std::make_shared<MyMsgPublisherNode>());
-  RCLCPP_INFO(rcl_logger, "[TEST]: Publishing MyNumMsg and MySphereMsg, check "
-                          "the ros2 topics...\n");
+
   rclcpp::shutdown();
   return 0;
 }
