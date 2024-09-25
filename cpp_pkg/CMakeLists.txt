@@ -12,21 +12,25 @@ find_package(std_msgs REQUIRED)
 find_package(example_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(cpp_pkg REQUIRED)
 
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
 add_executable(server src/service_server.cpp)
 add_executable(client src/service_client.cpp)
+add_executable(my_msg_publisher src/publish_mymsg.cpp)
 ament_target_dependencies(talker rclcpp std_msgs)
 ament_target_dependencies(listener rclcpp std_msgs)
 ament_target_dependencies(server rclcpp example_interfaces)
 ament_target_dependencies(client rclcpp example_interfaces)
+ament_target_dependencies(my_msg_publisher rclcpp cpp_pkg)
 
 install(TARGETS
   talker
   listener
   server 
   client 
+  my_msg_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 
