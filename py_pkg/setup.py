@@ -29,6 +29,7 @@ setup(
             "listener_py = py_pkg.listener:main",
             "server = py_pkg.service_server:main",
             "client = py_pkg.service_client:main",
+            "myparam = py_pkg.param_node:main",
         ],
     },
 )

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node name="sim" namespace="turtlesim1" pkg="turtlesim" exec="turtlesim_node" output="screen"/>
+  <node name="sim" namespace="turtlesim2" pkg="turtlesim" exec="turtlesim_node" output="screen"/>
+
+  <node name="sim_mimic" pkg="turtlesim" exec="mimic" respawn="false" respawn_delay="0">
+    <remap from="/input/pose" to="/turtlesim1/turtle1/pose"/>
+    <remap from="/output/cmd_vel" to="/turtlesim2/turtle1/cmd_vel"/>
+  </node>
+  
+</launch>

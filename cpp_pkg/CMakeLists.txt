@@ -21,6 +21,7 @@ add_executable(client src/service_client.cpp)
 add_executable(mymsg_publisher src/mymsg_publisher.cpp)
 add_executable(mysrv_server src/mysrv_server.cpp)
 add_executable(mysrv_client src/mysrv_client.cpp)
+add_executable(myparam src/param_node.cpp)
 
 ament_target_dependencies(talker rclcpp std_msgs)
 ament_target_dependencies(listener rclcpp std_msgs)
@@ -29,6 +30,7 @@ ament_target_dependencies(client rclcpp example_interfaces)
 ament_target_dependencies(mymsg_publisher rclcpp cpp_pkg)
 ament_target_dependencies(mysrv_server rclcpp cpp_pkg)
 ament_target_dependencies(mysrv_client rclcpp cpp_pkg)
+ament_target_dependencies(myparam rclcpp)
 
 install(TARGETS
   talker
@@ -38,6 +40,7 @@ install(TARGETS
   mymsg_publisher
   mysrv_server
   mysrv_client
+  myparam
   DESTINATION lib/${PROJECT_NAME}
 )
 

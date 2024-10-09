@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node name="talker" pkg="cpp_pkg" exec="talker"/>
+    <node name="listener" pkg="cpp_pkg" exec="listener"/>
+</launch>
