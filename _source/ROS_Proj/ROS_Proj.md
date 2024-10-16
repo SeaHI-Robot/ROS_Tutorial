@@ -52,7 +52,7 @@
 
 - ***"High-ROS-Snippets"*** 
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
-  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets)
+  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets/tree/ros1)
   - *需要手动加载vsix文件实现该插件安装*
 
 
@@ -70,7 +70,7 @@
   - *供参考学习使用，同步课程进度更新*
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
   - *开发版本：ROS2 humble*
-  - [*仓库地址*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/ros2_learning-ws)
+  - [*仓库地址*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/ros2_learning)
 
 <br>
 
@@ -78,7 +78,7 @@
 
 - ***"High-ROS2-Snippets"*** 
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
-  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets/tree/ros2)
+  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets)
   - *需要手动加载vsix文件实现该插件安装*
 
 
