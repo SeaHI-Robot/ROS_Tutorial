@@ -15,7 +15,7 @@
 - **duckbot - ros1:** 
   - *2023Fall-ME332课程中用于在ROS中学习使用URDF*
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
-  - *ROS1 noetic*
+  - *ROS VERSION: noetic*
   - [*Project Link*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/master/resources/duckbot)
 - **import your custom urdf package to ROS**
   - *This is the file repository for files to use the robot arm urdf simulation*
@@ -31,13 +31,30 @@
 
 
 
-### ***"23Fall-ME332-catkin-ws"***
+### ***"23Fall-ME332-reference-pkgs"***
 
-- ***"参考工作空间"*** 
+- ***"参考packages"*** 
   - *供参考学习使用，同步课程进度更新*
   - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
-  - *开发版本：ROS1 noetic*
-  - [*仓库地址*](https://github.com/SeaHI-Robot/23Fall-SUSTech-ME332-ROS-catkin-ws.git)
+  - *ROS VERSION: noetic*
+  - [*仓库地址*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/23fall-ws)
+
+<br>
+
+### ***VSCode ROS Snippets***
+
+> **VSCode 代码片段补全插件** 
+  
+- ***"ROS-Snippets"*** 
+  - *Author:*  [*SweiLz*](https://github.com/SweiLz)
+  - [*仓库地址*](https://github.com/SweiLz/ROS-Snippets)
+  - *可以直接在vsode插件市场安装*
+
+- ***"High-ROS-Snippets"*** 
+  - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
+  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets)
+  - *需要手动加载vsix文件实现该插件安装*
+
 
 <br>
 
@@ -46,7 +63,23 @@
 ## ROS2
 
 
+### ***"23Fall-ME332-reference-pkgs"***
+
+- ***"参考packages"*** 
+  - *供参考学习使用，同步课程进度更新*
+  - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
+  - *开发版本：ROS2 humble*
+  - [*仓库地址*](https://github.com/SeaHI-Robot/ROS_Tutorial/tree/ros2_learning-ws)
+
 <br>
+
+### ***VSCode ROS Snippets***
+
+- ***"High-ROS2-Snippets"*** 
+  - *Author:*  [*SeaHI-Robot*](https://github.com/SeaHI-Robot)
+  - [*仓库地址*](https://github.com/SeaHI-Robot/High-ROS-Snippets/tree/ros2)
+  - *需要手动加载vsix文件实现该插件安装*
+
 
 <br>
 
