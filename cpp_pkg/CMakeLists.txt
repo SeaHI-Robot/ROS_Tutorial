@@ -12,7 +12,7 @@ find_package(std_msgs REQUIRED)
 find_package(example_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(cpp_pkg REQUIRED)
+find_package(custom_msg_srv_pkg REQUIRED)
 
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
@@ -27,9 +27,9 @@ ament_target_dependencies(talker rclcpp std_msgs)
 ament_target_dependencies(listener rclcpp std_msgs)
 ament_target_dependencies(server rclcpp example_interfaces)
 ament_target_dependencies(client rclcpp example_interfaces)
-ament_target_dependencies(mymsg_publisher rclcpp cpp_pkg)
-ament_target_dependencies(mysrv_server rclcpp cpp_pkg)
-ament_target_dependencies(mysrv_client rclcpp cpp_pkg)
+ament_target_dependencies(mymsg_publisher rclcpp custom_msg_srv_pkg)
+ament_target_dependencies(mysrv_server rclcpp custom_msg_srv_pkg)
+ament_target_dependencies(mysrv_client rclcpp custom_msg_srv_pkg)
 ament_target_dependencies(myparam rclcpp)
 
 install(TARGETS
@@ -48,14 +48,6 @@ install(TARGETS
 install(DIRECTORY
   launch
   DESTINATION share/${PROJECT_NAME}/
-)
-
-# Add custom msg and srv
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/MyNumMsg.msg"
-  "msg/MySphereMsg.msg"
-  "srv/AddThreeInts.srv"
-  DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
 )
 
 if(BUILD_TESTING)
