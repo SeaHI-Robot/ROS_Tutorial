@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/syw/ros2_ws/install/py_pkg/lib/python3.10/site-packages",
+        "/home/syw/ros2_ws/install/opencv_pkg/lib/python3.10/site-packages",
+        "/home/syw/ros2_ws/install/custom_msg_srv_pkg/local/lib/python3.10/dist-packages",
+        "/home/syw/ros2_ws/install/action_define/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/syw/ros2_ws/install/py_pkg/lib/python3.10/site-packages",
+        "/home/syw/ros2_ws/install/opencv_pkg/lib/python3.10/site-packages",
+        "/home/syw/ros2_ws/install/custom_msg_srv_pkg/local/lib/python3.10/dist-packages",
+        "/home/syw/ros2_ws/install/action_define/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
