@@ -16,6 +16,7 @@ find_package(custom_msg_srv_pkg REQUIRED)
 
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
+add_executable(listener_with_topic_statistics src/listener_with_statistics.cpp)
 add_executable(server src/service_server.cpp)
 add_executable(client src/service_client.cpp)
 add_executable(mymsg_publisher src/mymsg_publisher.cpp)
@@ -25,6 +26,7 @@ add_executable(myparam src/param_node.cpp)
 
 ament_target_dependencies(talker rclcpp std_msgs)
 ament_target_dependencies(listener rclcpp std_msgs)
+ament_target_dependencies(listener_with_topic_statistics rclcpp std_msgs)
 ament_target_dependencies(server rclcpp example_interfaces)
 ament_target_dependencies(client rclcpp example_interfaces)
 ament_target_dependencies(mymsg_publisher rclcpp custom_msg_srv_pkg)
@@ -35,6 +37,7 @@ ament_target_dependencies(myparam rclcpp)
 install(TARGETS
   talker
   listener
+  listener_with_topic_statistics
   server 
   client 
   mymsg_publisher
