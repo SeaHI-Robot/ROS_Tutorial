@@ -1,16 +1,11 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>my_nav2_pkg</name>
-  <version>0.0.1</version>
-  <description>EE211-24Fall-Lab-Session-Week08: SLAM and Navigation</description>
-  <maintainer email="12012324@mail.sustech.edu.cn">SiyuanWang</maintainer>
-  <license>MIT</license>
-
-  <depend>rclpy</depend>
-  <exec_depend>nav2_bringup</exec_depend>
-  <depend>geometry_msgs</depend>
-  <depend>nav2_simple_commander</depend>
+  <name>tf2_py_example</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="12012324@mail.sustech.edu.cn">syw</maintainer>
+  <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
