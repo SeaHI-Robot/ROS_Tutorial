@@ -13,7 +13,7 @@ find_package(ament_cmake REQUIRED)
 
 # Install launch files
 install(DIRECTORY
-  launch urdf rviz config world
+  launch urdf rviz config world maps
   DESTINATION share/${PROJECT_NAME}/
 )
 
